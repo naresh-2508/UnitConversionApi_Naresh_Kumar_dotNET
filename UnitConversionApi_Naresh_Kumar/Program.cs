@@ -1,0 +1,14 @@
+
+using UnitConversionApi.Middleware;
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddApplicationServices();
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+app.UseMiddleware<ExceptionMiddleware>();
+app.UseSwagger();
+app.UseSwaggerUI();
+app.MapControllers();
+app.Run();
