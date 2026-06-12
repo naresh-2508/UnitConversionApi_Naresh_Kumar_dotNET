@@ -12,8 +12,10 @@ Production-style ASP.NET Core 8 Web API using:
 
 ## Run
 
-dotnet restore
+dotnet restore 
+
 dotnet build
+
 dotnet run
 
 Navigate to:
